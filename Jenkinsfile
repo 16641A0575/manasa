@@ -38,6 +38,7 @@ pipeline
 		  	echo "delivery"
 		  }
 	  }
+  }
 	post
   	{
 		failure
@@ -49,5 +50,5 @@ pipeline
 			emailext body: 'pass', subject: 'pipeline status', to: 'dhadimsnasa@gmail.com'
 		}
 	}
-  }
 }
+
