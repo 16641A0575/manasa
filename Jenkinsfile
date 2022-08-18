@@ -5,26 +5,41 @@ pipeline
   {
 	  stage('checkout')
 	  {
-		  checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/16641A0575/manasa.git']]])
+	  	steps
+	   	{
+		  	checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/16641A0575/manasa.git']]])
+	   	}
 	  }
 	  stage('static code analysis')
 	  {
-		  echo "static code analysis"
+		  steps
+		  {
+		  	echo "static code analysis"
+		  }
 	  }
 	  stage('Build')
 	  {
-		  echo "build the code"
+		  steps
+		  {
+		  	echo "build the code"
+		  }
 	  }
 	  stage('unit testing')
 	  {
-		  echo "unit testing"
+		  steps
+		  {
+		  	echo "unit testing"
+		  }
 	  }
 	  stage('delivery')
 	  {
-		  echo "delivery"
+		  steps
+		  {
+		  	echo "delivery"
+		  }
 	  }
 	post
-  {
+  	{
 		failure
 		{
 			emailext body: 'fail', subject: 'pipeline status', to: 'dhadimsnasa@gmail.com'
