@@ -1,9 +1,9 @@
-def simple_interest(p, t, r):
-    print('The principal is', p)
+def simple_interest(s, t, r):
+    print('The principal is', s)
     print('The time period is', t)
     print('The rate of interest is', r)
 
-    si = (p * t * r) / 100
+    si = (s * t * r) / 100
 
     print('The Simple Interest is', si)
     return si
