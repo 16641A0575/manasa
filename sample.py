@@ -1,4 +1,4 @@
-def simple_interest(a, t, r):
+def simple_interest(a, t, a):
     print('The principal is', a)
     print('The time period is', t)
     print('The rate of interest is', r)
